@@ -1,21 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Therapy Hub Portal</title>
-    <link rel="icon" type="image/jpeg" href="/therapy-hub-logo.jpg" />
-    <meta name="description" content="Clinical scheduling, therapist management, geofence staff attendance check-in/out portal for Therapy Hub." />
-    <meta property="og:title" content="Therapy Hub Portal" />
-    <meta property="og:description" content="Clinical scheduling, therapist management, geofence staff attendance check-in/out portal for Therapy Hub." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-slate-950 text-slate-100 antialiased min-h-screen">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 text-gray-800 antialiased">
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+    <script type="text/babel">
+        const { useState } = React;
+
+        function App() {
+            return (
+                <div class="min-h-screen flex flex-col items-center justify-center p-6">
+                    <div class="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full text-center border border-gray-100">
+                        <i class="fa-solid fa-hospital-user text-teal-600 text-5xl mb-4"></i>
+                        <h1 class="text-2xl font-bold text-gray-800 mb-2">Therapy Hub ERP</h1>
+                        <p class="text-gray-500 text-sm mb-6">PECHS Branch Portal Live!</p>
+                        <button class="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2.5 rounded-xl transition shadow-md">
+                            Welcome Zohaib Bhai
+                        </button>
+                    </div>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
 </html>
