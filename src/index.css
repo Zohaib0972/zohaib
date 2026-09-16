@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+/* Print Specific Styling */
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-area {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    color: black !important;
+  }
+  th, td {
+    border: 1px solid #1e293b !important;
+    padding: 7px 8px !important;
+    color: black !important;
+    font-size: 11px !important;
+  }
+  th {
+    background-color: #f1f5f9 !important;
+    color: black !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+  }
+  input {
+    background: transparent !important;
+    border: none !important;
+    color: black !important;
+    font-weight: 600 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+  .print-hide-empty input[value=""] {
+    display: none !important;
+  }
+  .page-break {
+    page-break-after: always;
+    break-after: page;
+  }
+  .print-header {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #0f172a;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+  .print-footer {
+    display: flex !important;
+    justify-content: space-between;
+    margin-top: 36px;
+    padding-top: 16px;
+    border-top: 1px solid #cbd5e1;
+  }
+}
